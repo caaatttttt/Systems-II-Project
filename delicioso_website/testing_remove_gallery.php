@@ -55,7 +55,7 @@
         <div class="navigation">
             <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="index.html">Shop Online</a></li>
+            <li><a href="https://bakery-105196.square.site" target="_blank">Shop Online</a></li>
             <li><a href="index.html">Wedding Cakes</a></li>
 
             <li><a href="testing_gallery_display.php">Gallery</a></li>

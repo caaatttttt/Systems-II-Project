@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <!-- Site Metas -->
   <link rel="icon" href="images/logo_favicon.jpg">
   <meta name="keywords" content="">
@@ -27,14 +27,14 @@
 
  <!-- range slider -->
 
-  <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet">
-
+ 
+<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet">
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet">
-
+  <link href="css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -76,29 +76,43 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="https://bakery-105196.square.site" target="_blank">Shop Online</a></li>
         <li><a href="index.html">Wedding Cakes</a></li>
-            <!-- <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Products</a>
-            <div class="dropdown-content">
-                <a href="cake_products_listing.php">Custom Cakes</a>
-                <a href="#">Wedding Cakes</a>
-                <a href="cake_products_listing.php">Cakes</a>
-                <a href="#">Cupcakes</a>
-                <a href="#">Cookies</a>
-            </div>
-        </li> -->
+            
         <li><a href="testing_gallery_display.php">Gallery</a></li>
         <li><a href="contact.html">Visit Us</a></li>
-      </ul>
-        
-        
-        
+        </ul>        
         </div>
-    </header>     
-                      <div class="hero_div">
-        <img src="images/banner.png" alt="Banner image of a owners Maria and Otilia behind food display case" class="hero-img">
-  </div>
-    </div>
+        
+        <div class="mobile_navigation">
+        <!-- Simulate a smartphone / tablet -->
+       <div class="mobile-container">
+        <div class="topnav">
+          <a href="#home" class="active_">
+              <span>
+                Delicioso Cupcakery & Coffee Shop
+              </span>
+            </a>
+          <div id="myLinks">
+            <a href="index.html">Home</a>
+            <a href="https://bakery-105196.square.site" target="_blank">Shop Online</a>
+            <a href="#wedding_cakes">Wedding Cakes</a>
+            <a href="testing_gallery_display.php">Gallery</a>
+            <a href="contact.html">Visit Us</a>
+          </div>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars hamburger"></i>
+          </a>
+        </div>
 
-    <section class="specialties">
+        </div> 
+        </div>
+    
+      </header>     
+      <div class="hero_div">
+        <img src="images/banner.png" alt="Banner image of a owners Maria and Otilia behind food display case" class="hero-img">
+      </div>
+    </div>
+<div class="home_page">
+<section class="specialties">
   <section class="product_section layout_padding">
     <div class="container">
       <div class="heading_container heading_center">
@@ -158,12 +172,68 @@
 
       </div>
     </div> 
-        </section> </section>
- <!-- end product section -->
+        </section>
+    </section> 
 
-  
+<div class="mobile_specialties">
+     <div class="heading_container heading_center">
+        <h2>
+          Our Specialties
+        </h2>         
+      </div>
+<div class="swiffy-slider slider-item-show2 slider-item-reveal slider-nav-dark slider-nav-visible slider-nav-autoplay  slider-nav-autopause">
+    <ul class="slider-container py-4">
+        <li class="slide-visible">
+            <div class="top_img">
+                <div class="ratio start_img">
+                    <img src="images/cake.jpg" class="card-img-top start" loading="lazy" alt="...">
+                </div>
+                <div class="card-body p-3 p-xl-5 start_body">
+                    <div><a href="#" class="btn btn-primary home_btns">Cakes</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="slide-visible">
+            <div class="top_img">
+                <div class="ratio">
+                    <img src="images/cupcake2.jpg" class="card-img-top" loading="lazy" alt="...">
+                </div>
+                <div class="card-body p-3 p-xl-5">
+                    <a href="#" class="btn btn-primary home_btns">Cupcakes</a>
+                </div>
+            </div>
+        </li>
+        <li class="slide-visible">
+            <div class="top_img">
+                <div class="ratio">
+                    <img src="images/cookie13.jpg" class="card-img-top" loading="lazy" alt="...">
+                </div>
+                <div class="card-body p-3 p-xl-5">
+                    <a href="#" class="btn btn-primary home_btns">Cookies</a>
+                </div>
+            </div>
+        </li>
+        
+        <li class="slide-visible">
+            <div class="top_img">
+                <div class="ratio end_img">
+                    <img src="images/wedding_cake14.jpg" class="card-img-top" loading="lazy" alt="...">
+                </div>
+                <div class="card-body  end_body p-3 p-xl-5">
+                    <a href="#" class="btn btn-primary home_btns">Wedding Cakes</a>
+                </div>
+            </div>
+        </li>
+        
+    </ul>
+
+    <button type="button" class="slider-nav" aria-label="Go left"></button>
+    <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+</div>
+    </div>
     
-    <section class="about-us">
+<section class="about-us">
     <div class="about">
       <img src="images/owners.jpg" class="pic">
       <div class="text">
@@ -173,10 +243,18 @@
       </div>
     </div>
   </section>
-    
-    
-    
-  <!-- end why us section -->
+
+<section class="about-us-mobile">
+    <div class="container">
+ <div class="text">
+        <h2>Who We Are</h2>
+          <h5><span class="owner_name">Maria Torres</span> & <span class="owner_name">Otilia Espinoza</span></h5>
+           <img src="images/owners.jpg" class="pic">
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita natus ad sed harum itaque ullam enim quas, veniam accusantium, quia animi id eos adipisci iusto molestias asperiores explicabo cum vero atque amet corporis! Soluta illum facere consequuntur magni. Ullam dolorem repudiandae cumque voluptate consequatur consectetur, eos provident necessitatibus reiciendis corrupti!</p>
+      </div>
+
+        </div>
+</section>
     <section class="reviews">
       <div class="heading_container heading_center">
         <h2>
@@ -184,8 +262,17 @@
           </h2></div>
         <div class="container-fluid">
             <iframe src='https://widgets.sociablekit.com/google-reviews/iframe/120956' ></iframe> </div></section>
+    </div>
 
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- custom js -->
+  <script src="js/testing.js"></script>    
 
+    </body>
+<footer>
   <!-- info section -->
   <section class="info_section">
     <div class="container">
@@ -270,14 +357,6 @@
   </section>
 
   <!-- end info_section -->
-
-  <!-- jQery -->
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <!-- bootstrap js -->
-  <script src="js/bootstrap.js"></script>
-  <!-- custom js -->
-  <script src="js/custom.js"></script>
-
-    </body>
+    </footer>
 
 </html>

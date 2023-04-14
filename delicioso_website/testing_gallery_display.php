@@ -71,20 +71,42 @@
       </div>
         
         <div class="navigation">
-        <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html">Shop Online</a></li>
-        <li><a href="index.html">Wedding Cakes</a></li>
+            <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Shop Online</a></li>
+            <li><a href="index.html">Wedding Cakes</a></li>
 
-        <li><a href="testing_gallery_display.php">Gallery</a></li>
-        <li><a href="contact.html">Visit Us</a></li>
-      </ul>
-        
-        
-        
+            <li><a href="testing_gallery_display.php">Gallery</a></li>
+            <li><a href="contact.html">Visit Us</a></li>
+            </ul>
         </div>
-    </header>     
+        <div class="mobile_navigation">
+        <!-- Simulate a smartphone / tablet -->
+       <div class="mobile-container">
+        <div class="topnav">
+          <a href="#home" class="active_">
+              <span>
+                Delicioso Cupcakery & Coffee Shop
+              </span>
+            </a>
+          <div id="myLinks">
+            <a href="index.html">Home</a>
+            <a href="https://bakery-105196.square.site" target="_blank">Shop Online</a>
+            <a href="#wedding_cakes">Wedding Cakes</a>
+            <a href="testing_gallery_display.php">Gallery</a>
+            <a href="contact.html">Visit Us</a>
+          </div>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars hamburger"></i>
+          </a>
+        </div>
+
+        </div> 
+        </div>
+ 
+    </header>
   </div>    
+    <div class="gallery_page">
     <!-- Gallery Navigation Bar -->
     <div class="tab">
       <button class="tablinks" onclick="openTab(event, 'Cakes')" id="defaultOpen">Cakes</button>
@@ -94,48 +116,17 @@
       <button class="tablinks" onclick="openTab(event, 'Other')">Other Goodies</button>
     </div>
 
-    <!-- Cake Carousel Section -->
+    
+    <!-- Cakes Section -->
     <div id="Cakes" class="tabcontent">
-    <div class="container-fluid">
-    <div class="row justify-content-center mb-2 " >
-    <div class="col-lg-3">
-        <!-- Pull Images From Database and Display in Bootstrap Carousel -->
-        <div id="cakes" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner" >
-            <?php
-                $i = 0;
-                foreach($cakes as $row) {
-                    $actives = '';
-                    if($i ==0){
-                        $actives = 'active';
-                    }?>
-                    <div  class="carousel-item <?= $actives; ?>">
-                        <img src="images/<?= $row['file_name'] ?>">
-                    </div>
-                    <?php $i++;
-                } ?>
-        </div>
-
-        <!-- Left and Right Controls -->
-        <a class="carousel-control-prev" href="#cakes" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#cakes" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </a>
-        </div>
-    </div>
-        <div class="col-lg-1"></div>
     <!-- Text Section --> 
-    <div style="word-wrap:break-word" class="col-lg-3">
+    <div style="word-wrap:break-word" class="gallery_text">
     <div class="heading_container heading_center">
-        <h2 id="cakes">Cakes</h2>
+    <h2 id="cakes">Cakes</h2>
     </div><hr><br>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
-    </div>
-    </div>
-    </div>
-    <div class="gallery_display">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> </div>
+    <!-- Gallery Display -->
+        <div class="gallery_display">
         <?php
             $i = 0;
             foreach($cakes as $row) {
@@ -143,52 +134,20 @@
                 if($i ==0){
                     $actives = 'active';
                 } ?>
-               <img src="images/<?= $row['file_name'] ?>"  height="400">
+               <img src="images/<?= $row['file_name'] ?>" >
         <?php $i++; } ?>
     </div>
     </div>
 
-    <!-- Cupcake Carousel Section -->
+    <!-- Cupcake Section -->
     <div id="Cupcakes" class="tabcontent">
-    <!--<div class="container-fluid">
-    <div class=" row justify-content-center mb-2" >
-    <div class="col-lg-3">
-        <!-- Pull Images From Database and Display in Bootstrap Carousel -->
-        <div id="cupcakes" class="carousel slide" data-ride="carousel">
-       <!-- <div class="carousel-inner" >
-            <?php
-                $i = 0;
-                foreach($cupcakes as $row) {
-                    $actives = '';
-                    if($i ==0){
-                        $actives = 'active';
-                    }?>
-                    <div  class="carousel-item <?= $actives; ?>">
-                        <img src="images/<?= $row['file_name'] ?>">
-                    </div>
-                    <?php $i++;
-                } ?> 
-        </div> -->
-
-        <!-- Left and Right Controls -->
-       <!-- <a class="carousel-control-prev" href="#cupcakes" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#cupcakes" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </a>
-        </div> 
-    </div> -->
-        
-     <!-- Text Section --> 
-    <!-- <div style="word-wrap:break-word" class="col-lg-3"> -->
+    <!-- Text Section --> 
     <div style="word-wrap:break-word" class="gallery_text">
     <div class="heading_container heading_center">
-        <h2 id="cakes">Cupcakes</h2>
+    <h2 id="cupcakes">Cupcakes</h2>
     </div><hr><br>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> </div>
-  <!--  </div>
-    </div> -->
+    <!-- Gallery Display -->
         <div class="gallery_display">
         <?php
             $i = 0;
@@ -197,53 +156,20 @@
                 if($i ==0){
                     $actives = 'active';
                 } ?>
-               <img src="images/<?= $row['file_name'] ?>"  height="400">
+               <img src="images/<?= $row['file_name'] ?>" >
         <?php $i++; } ?>
     </div>
-        </div> 
     </div>
 
-    <!-- Cookies Carousel Section -->
+    <!-- Cookie Section -->
     <div id="Cookies" class="tabcontent">
-    <div class="container-fluid">
-    <div class=" row justify-content-center mb-2 carousel_section" >
-    <div class="col-lg-3">
-        <!-- Pull Images From Database and Display in Bootstrap Carousel -->
-        <div id="cookies" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner" >
-            <?php
-                $i = 0;
-                foreach($cookies as $row) {
-                    $actives = '';
-                    if($i ==0){
-                        $actives = 'active';
-                    }?>
-                <div class="carousel-item <?= $actives; ?>">
-                  <img src="images/<?= $row['file_name'] ?>" width="100%" height="400">
-                </div>
-                <?php $i++;
-                } ?>
-        </div>
-
-        <!-- Left and Right Controls -->
-        <a class="carousel-control-prev" href="#cookies" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#cookies" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </a>
-        </div>
-    </div>
-
     <!-- Text Section --> 
-    <div style="word-wrap:break-word" class="col-lg-3">
+    <div style="word-wrap:break-word" class="gallery_text">
     <div class="heading_container heading_center">
-        <h2 id="cakes">Cookies</h2>
+    <h2 id="cookies">Cookies</h2>
     </div><hr><br>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
-    </div>
-    </div>
-    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> </div>
+    <!-- Gallery Display -->
         <div class="gallery_display">
         <?php
             $i = 0;
@@ -257,48 +183,16 @@
     </div>
     </div>
 
-
-    <!-- Wedding Cake Carousel Section -->
+    <!-- Wedding Cake Section -->
     <div id="Wedding_Cakes" class="tabcontent">
-    <div class="container-fluid">
-    <div class=" row justify-content-center mb-2 carousel_section" >
-    <div class="col-lg-3">
-        <!-- Pull Images From Database and Display in Bootstrap Carousel -->
-        <div id="wedding_cakes" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner" >
-            <?php
-                $i = 0;
-                foreach($wedding_cakes as $row) {
-                    $actives = '';
-                    if($i ==0){
-                        $actives = 'active';
-                    }?>
-                <div  class="carousel-item <?= $actives; ?>">
-                  <img src="images/<?= $row['file_name'] ?>" width="100%" height="400">
-                </div>
-                <?php $i++;
-                } ?>
-        </div>
-
-        <!-- Left and Right Controls -->
-        <a class="carousel-control-prev" href="#wedding_cakes" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#wedding_cakes" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </a>
-        </div>
-    </div>
-        
-    <!-- Text Section -->    
-    <div style="word-wrap:break-word" class="col-lg-3">
+    <!-- Text Section --> 
+    <div style="word-wrap:break-word" class="gallery_text">
     <div class="heading_container heading_center">
-        <h2 id="cakes">Wedding Cakes</h2>
+    <h2 id="wedding_cakes">Wedding Cakes</h2>
     </div><hr><br>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> </div>
-    </div>
-    </div>
-     <!--   <div class="gallery_display">
+    <!-- Gallery Display -->
+        <div class="gallery_display">
         <?php
             $i = 0;
             foreach($wedding_cakes as $row) {
@@ -306,51 +200,20 @@
                 if($i ==0){
                     $actives = 'active';
                 } ?>
-               <img src="images/<?= $row['file_name'] ?>"  height="400">
+               <img src="images/<?= $row['file_name'] ?>">
         <?php $i++; } ?>
-    </div> -->
+    </div>
     </div>
 
-    <!-- Other Carousel Section -->
+    <!-- Other Goodies Section -->
     <div id="Other" class="tabcontent">
-    <div class="container-fluid">
-    <div class=" row justify-content-center mb-2 carousel_section" >
-    <div class="col-lg-3">
-        <!-- Pull Images From Database and Display in Bootstrap Carousel -->
-        <div id="other" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner" >
-            <?php
-                $i = 0;
-                foreach($other as $row) {
-                    $actives = '';
-                    if($i ==0){
-                        $actives = 'active';
-                    }?>
-                <div  class="carousel-item <?= $actives; ?>">
-                  <img src="images/<?= $row['file_name'] ?>" width="100%" height="400">
-                </div>
-                <?php $i++;
-                } ?>
-        </div>
-
-        <!-- Left and Right Controls -->
-        <a class="carousel-control-prev" href="#other" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#other" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </a>
-        </div>
-    </div>
-    
-    <!-- Text Section -->      
-    <div style="word-wrap:break-word" class="col-lg-3">
+    <!-- Text Section --> 
+    <div style="word-wrap:break-word" class="gallery_text">
     <div class="heading_container heading_center">
-        <h2 id="cakes">Other Goodies</h2>
+    <h2 id="other">Other Goodies</h2>
     </div><hr><br>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> </div>
-    </div>
-    </div>
+    <!-- Gallery Display -->
         <div class="gallery_display">
         <?php
             $i = 0;
@@ -363,14 +226,103 @@
         <?php $i++; } ?>
     </div>
     </div>
-
-    
-        
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/testing.js"></script>
+    
+      <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
 </body>
-  
+<footer>
+  <!-- info section -->
+  <section class="info_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="info_contact">
+            <h5>Contact Us
+ 
+            </h5>
+            <p>
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <a href=" http://maps.google.com/?q=1001 W Main St, Clarksville AR 72830">1001 W Main St, Clarkville AR 72830</a>
+            <p>
+              <i class="fa fa-phone" aria-hidden="true"></i>
+             <a href="tel:4792142537"> (479) 214-2537</a>
+            <p>
+              <i class="fa fa-envelope desktop" aria-hidden="true"></i>
+              <a href="mailto:deliciosoandc@gmail.com">deliciosoandc@gmail.com</a>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_info">
+            <h5>
+              Information
+            </h5>
+            <p>
+              We are a small bakery and coffee shop located in downtown Clarksville, AR. We strive to bring the community the best-tasting speciality desserts! Come on by!
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_links">
+            <h5>
+              Links
+            </h5>
+            <ul>
+              <li>
+                <a href="index.html">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="about.html">
+                  Shop our Menu
+                </a>
+              </li>
+              <li>
+                <a href="product.html">
+                  Gallery
+                </a>
+              </li>
+              <li>
+                <a href="why.html">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_form ">
+            <h5>
+              Newsletter
+            </h5>
+            <form action="">
+              <input type="email" placeholder="Enter your email">
+              <button>
+                Subscribe
+              </button>
+            </form>
+            <div class="social_box"><a href="https://www.facebook.com/calicaliclark/" target="_blank">Connect With Us on Facebook!
+                </a>
+              <a href="https://www.facebook.com/calicaliclark/" target="_blank">
+                <i class="fa fa-facebook facebook" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info_section -->
+    </footer>
 </html>

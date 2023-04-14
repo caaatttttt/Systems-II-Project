@@ -41,8 +41,6 @@
         <li><a href="contact.html">Visit Us</a></li>
       </ul>
         
-        
-        
         </div>
     </header>     
   </div>
@@ -66,136 +64,137 @@
         
 
     if (array_key_exists('delete_file', $_POST)) {
- echo "<meta http-equiv='refresh' content='0'>";
-  $filename = $_POST['delete_file'];
-      $conn->query("DELETE FROM cakes WHERE file_name = '$filename'");
+        echo "<meta http-equiv='refresh' content='0'>";
+        $filename = $_POST['delete_file'];
+        $conn->query("DELETE FROM cakes WHERE file_name = '$filename'");
         $conn->query("DELETE FROM cupcakes WHERE file_name = '$filename'");
         $conn->query("DELETE FROM cookies WHERE file_name = '$filename'");
         $conn->query("DELETE FROM wedding_cake WHERE file_name = '$filename'");
-        $conn->query("DELETE FROM other WHERE file_name = '$filename'");
-      
-}
+        $conn->query("DELETE FROM other WHERE file_name = '$filename'"); 
+    }
         
 
-?> 
-    <div id="Cakes" class="tabcontent remove">
-    <form class="file_upload" action="" method="post" enctype="multipart/form-data">
-        <p>Cake Images:</p>
-        <input type="file" name="file">
-        <input type="submit" name="cake" value="Upload">
-    </form>
-    <?php
-        $i = 0;
-        foreach($cakes as $row) {
-            $actives = '';
-            if($i ==0){
-                $actives = 'active';
-            } ?>
-
-        <div  class="carousel-item <?= $actives; ?> remove_display">
-           <img src="images/<?= $row['file_name'] ?>"  height="400">
-           <form method="post">                       
+?>
+    <!-- Cakes Section -->
+    <div id="Cakes" class="tabcontent ">
+        <form class="file_upload" action="" method="post" enctype="multipart/form-data">
+            <p>Cake Images:</p>
+            <input type="file" name="file">
+            <input type="submit" name="cake" value="Upload">
+        </form>
+        <?php
+            $i = 0;
+            foreach($cakes as $row) {
+                $actives = '';
+                if($i ==0){
+                    $actives = 'active';
+                } ?>
+            <div class="gallery_display">
+               <img src="images/<?= $row['file_name'] ?>">
+                <form method="post">                       
                <input type="hidden" value="<?php echo $row['file_name']?>" name="delete_file" >
                <input type="submit" value="Delete image" onclick="return confirm('Are you sure you want to delete the photo?');">
-           </form>
-        </div>
+                </form>
+            </div>
         <?php $i++; } ?>
     </div>
 
-    <div id="Cupcakes" class="tabcontent remove">
-    <form class="file_upload" action="" method="post" enctype="multipart/form-data">
-        <p>Cupcake Images:</p>
-        <input type="file" name="file">
-        <input type="submit" name="cupcake" value="Upload">
-    </form>
-    <?php
-        $i = 0;
-        foreach($cupcakes as $row) {
-            $actives = '';
-            if($i ==0){
-                $actives = 'active';
-            } ?>
-
-        <div class="carousel-item <?= $actives; ?> remove_display">
-           <img src="images/<?= $row['file_name'] ?>"  height="400">
-           <form method="post">                       
+    <!-- Cupcakes Section -->
+    <div id="Cupcakes" class="tabcontent ">
+        <form class="file_upload" action="" method="post" enctype="multipart/form-data">
+            <p>Cupcake Images:</p>
+            <input type="file" name="file">
+            <input type="submit" name="cupcake" value="Upload">
+        </form>
+        <?php
+            $i = 0;
+            foreach($cupcakes as $row) {
+                $actives = '';
+                if($i ==0){
+                    $actives = 'active';
+                } ?>
+            <div class="gallery_display">
+               <img src="images/<?= $row['file_name'] ?>"  height="400">
+                <form method="post">                       
                <input type="hidden" value="<?php echo $row['file_name']?>" name="delete_file" >
                <input type="submit" value="Delete image" onclick="return confirm('Are you sure you want to delete the photo?');">
-           </form>
-        </div>
- 
-
+                </form>
+            </div>
         <?php $i++; } ?>
     </div>
         
-    <div id="Cookies" class="tabcontent remove">
-    <form class="file_upload" action="" method="post" enctype="multipart/form-data">
-        <p> Cookie Images:</p>
-        <input type="file" name="file">
-        <input type="submit" name="cookie" value="Upload">
-    </form>
-    <?php
-        $i = 0;
-        foreach($cookies as $row) {
-            $actives = '';
-            if($i ==0){
-                $actives = 'active';
-            } ?>
-        <div class="carousel-item <?= $actives; ?> remove_display">
-           <img src="images/<?= $row['file_name'] ?>"  height="400">
-           <form method="post">                       
+    <!-- Cookies Section -->
+    <div id="Cookies" class="tabcontent ">
+        <form class="file_upload" action="" method="post" enctype="multipart/form-data">
+            <p>Cookie Images:</p>
+            <input type="file" name="file">
+            <input type="submit" name="cookie" value="Upload">
+        </form>
+        <?php
+            $i = 0;
+            foreach($cookies as $row) {
+                $actives = '';
+                if($i ==0){
+                    $actives = 'active';
+                } ?>
+            <div class="gallery_display">
+               <img src="images/<?= $row['file_name'] ?>"  height="400">
+                <form method="post">                       
                <input type="hidden" value="<?php echo $row['file_name']?>" name="delete_file" >
                <input type="submit" value="Delete image" onclick="return confirm('Are you sure you want to delete the photo?');">
-           </form>
-        </div>
+                </form>
+            </div>
         <?php $i++; } ?>
     </div>
 
-    <div id="Wedding_Cakes" class="tabcontent remove">
-    <form class="file_upload" action="" method="post" enctype="multipart/form-data">
-        <p> Wedding Cake Images:</p>
-        <input type="file" name="file">
-        <input type="submit" name="wedding_cake" value="Upload">
-    </form>
-    <?php
-        $i = 0;
-        foreach($wedding_cakes as $row) {
-            $actives = '';
-            if($i ==0){
-                $actives = 'active';
-            } ?>
-        <div class="carousel-item <?= $actives; ?> remove_display">
-           <img src="images/<?= $row['file_name'] ?>"  height="400">
-           <form method="post">                       
+    <!-- Wedding Cakes Section -->
+    <div id="Wedding_Cakes" class="tabcontent ">
+        <form class="file_upload" action="" method="post" enctype="multipart/form-data">
+            <p>Cake Images:</p>
+            <input type="file" name="file">
+            <input type="submit" name="wedding_cake" value="Upload">
+        </form>
+        <?php
+            $i = 0;
+            foreach($wedding_cakes as $row) {
+                $actives = '';
+                if($i ==0){
+                    $actives = 'active';
+                } ?>
+            <div class="gallery_display">
+               <img src="images/<?= $row['file_name'] ?>"  height="400">
+                <form method="post">                       
                <input type="hidden" value="<?php echo $row['file_name']?>" name="delete_file" >
                <input type="submit" value="Delete image" onclick="return confirm('Are you sure you want to delete the photo?');">
-           </form>
-        </div>
+                </form>
+            </div>
         <?php $i++; } ?>
     </div>
 
-    <div id="Other" class="tabcontent remove">
-    <form class="file_upload" action="" method="post" enctype="multipart/form-data">
-        <p>Other Goodies Images:</p>
-        <input type="file" name="file">
-        <input type="submit" name="other" value="Upload">
-    </form>
-    <?php
-        $i = 0;
-        foreach($other as $row) {
-            $actives = '';
-            if($i ==0){
-                $actives = 'active';
-            } ?>
-        <div class="carousel-item <?= $actives; ?> remove_display">
-           <img src="images/<?= $row['file_name'] ?>"  height="400">
-           <form method="post">                       
+    <!-- Other Gppdies Section -->
+    <div id="Other" class="tabcontent ">
+        <form class="file_upload" action="" method="post" enctype="multipart/form-data">
+            <p>Cake Images:</p>
+            <input type="file" name="file">
+            <input type="submit" name="other" value="Upload">
+        </form>
+        <?php
+            $i = 0;
+            foreach($other as $row) {
+                $actives = '';
+                if($i ==0){
+                    $actives = 'active';
+                } ?>
+            <div class="gallery_display">
+               <img src="images/<?= $row['file_name'] ?>"  height="400">
+                <form method="post">                       
                <input type="hidden" value="<?php echo $row['file_name']?>" name="delete_file" >
                <input type="submit" value="Delete image" onclick="return confirm('Are you sure you want to delete the photo?');">
-           </form>
-        </div>
+                </form>
+            </div>
         <?php $i++; } ?>
     </div>
+
 
     <a href="testing_gallery_display.php" class="button large hpbottom goto_button">Go to Gallery</a>
         
@@ -214,6 +213,7 @@ $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
             $insert = $conn->query("INSERT into cakes (file_name, uploaded_on) VALUES ('".$fileName."', NOW())"); 
         
              if($insert){
+                        echo "<meta http-equiv='refresh' content='0'>";
                 echo '<script>alert("Image added successfully to Cakes Gallery.")</script>';
             }else{
                 echo '<script>alert("File upload failed, please try again.")</script>';
@@ -238,9 +238,10 @@ $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
         // Upload file to server
         if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
             // Insert image file name into database
-            $insert = $con->query("INSERT into cookies (file_name, uploaded_on) VALUES ('".$fileName."', NOW())"); 
+            $insert = $conn->query("INSERT into cookies (file_name, uploaded_on) VALUES ('".$fileName."', NOW())"); 
         
              if($insert){
+                         echo "<meta http-equiv='refresh' content='0'>";
                 echo '<script>alert("Image added successfully to Cookies Gallery.")</script>';
             }else{
                 echo '<script>alert("File upload failed, please try again.")</script>';
@@ -264,9 +265,10 @@ $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
         // Upload file to server
         if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
             // Insert image file name into database
-            $insert = $con->query("INSERT into cupcakes (file_name, uploaded_on) VALUES ('".$fileName."', NOW())"); 
+            $insert = $conn->query("INSERT into cupcakes (file_name, uploaded_on) VALUES ('".$fileName."', NOW())"); 
         
              if($insert){
+                         echo "<meta http-equiv='refresh' content='0'>";
                 echo '<script>alert("Image added successfully to Cupcakes Gallery.")</script>';
             }else{
                 echo '<script>alert("File upload failed, please try again.")</script>';
@@ -290,9 +292,10 @@ $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
         // Upload file to server
         if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
             // Insert image file name into database
-            $insert = $con->query("INSERT into wedding_cake(file_name, uploaded_on) VALUES ('".$fileName."', NOW())"); 
+            $insert = $conn->query("INSERT into wedding_cake(file_name, uploaded_on) VALUES ('".$fileName."', NOW())"); 
         
              if($insert){
+                         echo "<meta http-equiv='refresh' content='0'>";
                 echo '<script>alert("Image added successfully to Wedding Cakes Gallery.")</script>';
             }else{
                 echo '<script>alert("File upload failed, please try again.")</script>';
@@ -316,9 +319,10 @@ $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
         // Upload file to server
         if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
             // Insert image file name into database
-            $insert = $con->query("INSERT into other(file_name, uploaded_on) VALUES ('".$fileName."', NOW())"); 
+            $insert = $conn->query("INSERT into other(file_name, uploaded_on) VALUES ('".$fileName."', NOW())"); 
         
              if($insert){
+                         echo "<meta http-equiv='refresh' content='0'>";
                 echo '<script>alert("Image added successfully to Other Goodies Gallery.")</script>';
             }else{
                 echo '<script>alert("File upload failed, please try again.")</script>';

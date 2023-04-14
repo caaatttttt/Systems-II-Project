@@ -10,7 +10,6 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <!-- Basic -->
   <meta charset="utf-8">
@@ -25,21 +24,14 @@
 
   <title>Home | Delicioso Cupcakery & Coffee Shop</title>
 
-  
-<!-- <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'> -->
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-
     
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
   <!-- fonts style -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Gloria+Hallelujah&family=Mynerve&family=Poiret+One&family=Poppins&display=swap" rel="stylesheet">
-
-
- <!-- range slider -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Gloria+Hallelujah&family=Mynerve&family=Poiret+One&family=Poppins&display=swap" rel="stylesheet">
 
   <!-- font awesome style -->
   <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -70,6 +62,7 @@
         </div>
       </div>
         
+        <!-- Navigation -->
         <div class="navigation">
             <ul>
             <li><a href="index.html">Home</a></li>
@@ -80,34 +73,34 @@
             <li><a href="contact.html">Visit Us</a></li>
             </ul>
         </div>
+        
+       <!-- Mobile Navigation -->
         <div class="mobile_navigation">
-        <!-- Simulate a smartphone / tablet -->
-       <div class="mobile-container">
-        <div class="topnav">
-          <a href="#home" class="active_">
-              <span>
+        <div class="mobile-container">
+            <div class="topnav">
+                <a href="#home" class="active_">
+                <span>
                 Delicioso Cupcakery & Coffee Shop
-              </span>
-            </a>
-          <div id="myLinks">
-            <a href="index.html">Home</a>
-            <a href="https://bakery-105196.square.site" target="_blank">Shop Online</a>
-            <a href="#wedding_cakes">Wedding Cakes</a>
-            <a href="testing_gallery_display.php">Gallery</a>
-            <a href="contact.html">Visit Us</a>
-          </div>
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars hamburger"></i>
-          </a>
-        </div>
-
+                </span>
+                </a>
+              <div id="myLinks">
+                <a href="index.html">Home</a>
+                <a href="https://bakery-105196.square.site" target="_blank">Shop Online</a>
+                <a href="#wedding_cakes">Wedding Cakes</a>
+                <a href="testing_gallery_display.php">Gallery</a>
+                <a href="contact.html">Visit Us</a>
+              </div>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars hamburger"></i>
+              </a>
+            </div>
         </div> 
         </div>
- 
     </header>
-  </div>    
+  </div>  
+    
     <div class="gallery_page">
-    <!-- Gallery Navigation Bar -->
+    <!-- Gallery Tab Navigation -->
     <div class="tab">
       <button class="tablinks" onclick="openTab(event, 'Cakes')" id="defaultOpen">Cakes</button>
       <button class="tablinks" onclick="openTab(event, 'Cupcakes')">Cupcakes</button>
@@ -134,7 +127,7 @@
                 if($i ==0){
                     $actives = 'active';
                 } ?>
-               <img src="images/<?= $row['file_name'] ?>" >
+               <img src="images/<?= $row['file_name'] ?>" alt="image of a cake" >
         <?php $i++; } ?>
     </div>
     </div>
@@ -156,7 +149,7 @@
                 if($i ==0){
                     $actives = 'active';
                 } ?>
-               <img src="images/<?= $row['file_name'] ?>" >
+               <img src="images/<?= $row['file_name'] ?>" alt="image of a cupcake">
         <?php $i++; } ?>
     </div>
     </div>
@@ -178,7 +171,7 @@
                 if($i ==0){
                     $actives = 'active';
                 } ?>
-               <img src="images/<?= $row['file_name'] ?>"  height="400">
+               <img src="images/<?= $row['file_name'] ?>" alt="image of a cookie">
         <?php $i++; } ?>
     </div>
     </div>
@@ -200,7 +193,7 @@
                 if($i ==0){
                     $actives = 'active';
                 } ?>
-               <img src="images/<?= $row['file_name'] ?>">
+               <img src="images/<?= $row['file_name'] ?>" alt="image of a wedding cake">
         <?php $i++; } ?>
     </div>
     </div>
@@ -222,7 +215,7 @@
                 if($i ==0){
                     $actives = 'active';
                 } ?>
-               <img src="images/<?= $row['file_name'] ?>"  height="400">
+               <img src="images/<?= $row['file_name'] ?>"  alt="image of product by bakery">
         <?php $i++; } ?>
     </div>
     </div>
@@ -239,6 +232,8 @@
   <!-- custom js -->
   <script src="js/custom.js"></script>
 </body>
+    
+<!-- Footer -->  
 <footer>
   <!-- info section -->
   <section class="info_section">
@@ -322,7 +317,5 @@
       </div>
     </div>
   </section>
-
-  <!-- end info_section -->
     </footer>
 </html>

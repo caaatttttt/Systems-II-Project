@@ -1,19 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <!-- Basic -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Site Metas -->
+  <link rel="icon" href="images/logo_favicon.jpg">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-  <link href="css/style.css" rel="stylesheet">
+  <title>Home | Delicioso Cupcakery & Coffee Shop</title>
+
+    
+  <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
   <!-- fonts style -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Gloria+Hallelujah&family=Mynerve&family=Poiret+One&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Gloria+Hallelujah&family=Mynerve&family=Poiret+One&family=Poppins&display=swap" rel="stylesheet">
 
-</head>
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet">
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet">
+
+</head>   
     
     
-    
-    <body>
+<body>
   <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
@@ -25,22 +46,44 @@
                 Delicioso Cupcakery & Coffee Shop
               </span>
             </a>
-              
+            <img src="images/simple_logo.jpg" alt="image of logo" class="header_logo">
           </div>
-
         </div>
       </div>
         
+        <!-- Navigation -->
         <div class="navigation">
-        <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html">Shop Online</a></li>
-        <li><a href="index.html">Wedding Cakes</a></li>
+            <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Shop Online</a></li>
+            <li><a href="index.html">Wedding Cakes</a></li>
 
-        <li><a href="testing_gallery_display.php">Gallery</a></li>
-        <li><a href="contact.html">Visit Us</a></li>
-      </ul>
+            <li><a href="testing_gallery_display.php">Gallery</a></li>
+            <li><a href="contact.html">Visit Us</a></li>
+            </ul>
+        </div>
         
+       <!-- Mobile Navigation -->
+        <div class="mobile_navigation">
+        <div class="mobile-container">
+            <div class="topnav">
+                <a href="#home" class="active_">
+                <span>
+                Delicioso Cupcakery & Coffee Shop
+                </span>
+                </a>
+              <div id="myLinks">
+                <a href="index.html">Home</a>
+                <a href="https://bakery-105196.square.site" target="_blank">Shop Online</a>
+                <a href="#wedding_cakes">Wedding Cakes</a>
+                <a href="testing_gallery_display.php">Gallery</a>
+                <a href="contact.html">Visit Us</a>
+              </div>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars hamburger"></i>
+              </a>
+            </div>
+        </div> 
         </div>
     </header>     
   </div>
@@ -194,9 +237,6 @@
             </div>
         <?php $i++; } ?>
     </div>
-
-
-    <a href="testing_gallery_display.php" class="button large hpbottom goto_button">Go to Gallery</a>
         
 <?php       
 if(isset($_POST["cake"]) && !empty($_FILES["file"]["name"])){
@@ -336,8 +376,7 @@ $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
     }
 }
 ?>
-
     <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/testing.js"></script>
-    </body>
+    <script src="js/custom.js"></script>
+</body>
 </html>

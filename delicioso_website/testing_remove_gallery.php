@@ -65,7 +65,7 @@
         <div class="mobile_navigation">
         <div class="mobile-container">
             <div class="topnav">
-                <a href="#home" class="active_">
+                <a href="index.html" class="active_">
                 <span>
                 Delicioso Cupcakery & Coffee Shop
                 </span>
@@ -191,7 +191,7 @@
     <!-- Wedding Cakes Section -->
     <div id="Wedding_Cakes" class="tabcontent ">
         <form class="file_upload" action="" method="post" enctype="multipart/form-data">
-            <p>Cake Images:</p>
+            <p>Wedding Cake Images:</p>
             <input type="file" name="file">
             <input type="submit" name="wedding_cake" value="Upload">
         </form>
@@ -215,7 +215,7 @@
     <!-- Other Gppdies Section -->
     <div id="Other" class="tabcontent ">
         <form class="file_upload" action="" method="post" enctype="multipart/form-data">
-            <p>Cake Images:</p>
+            <p>Other Goodie Images:</p>
             <input type="file" name="file">
             <input type="submit" name="other" value="Upload">
         </form>

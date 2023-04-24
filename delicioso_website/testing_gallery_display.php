@@ -34,7 +34,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Gloria+Hallelujah&family=Mynerve&family=Poiret+One&family=Poppins&display=swap" rel="stylesheet">
 
   <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet">
@@ -76,7 +76,7 @@
         <div class="mobile_navigation">
         <div class="mobile-container">
             <div class="topnav">
-                <a href="#home" class="active_">
+                <a href="index.html" class="active_">
                 <span>
                 Delicioso Cupcakery & Coffee Shop
                 </span>
@@ -115,7 +115,7 @@
     <div class="heading_container heading_center">
     <h2 id="cakes">Cakes</h2>
     </div><hr><br>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> </div>
+ </div>
     <!-- Gallery Display -->
         <div class="gallery_display">
         <?php
@@ -137,7 +137,7 @@
     <div class="heading_container heading_center">
     <h2 id="cupcakes">Cupcakes</h2>
     </div><hr><br>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> </div>
+    </div>
     <!-- Gallery Display -->
         <div class="gallery_display">
         <?php
@@ -159,7 +159,7 @@
     <div class="heading_container heading_center">
     <h2 id="cookies">Cookies</h2>
     </div><hr><br>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> </div>
+    </div>
     <!-- Gallery Display -->
         <div class="gallery_display">
         <?php
@@ -181,7 +181,7 @@
     <div class="heading_container heading_center">
     <h2 id="wedding_cakes">Wedding Cakes</h2>
     </div><hr><br>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> </div>
+    </div>
     <!-- Gallery Display -->
         <div class="gallery_display">
         <?php
@@ -237,7 +237,7 @@
   <section class="info_section">
     <div class="container">
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-4">
           <div class="info_contact">
             <h5>Contact Us
  
@@ -254,7 +254,7 @@
             </p>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
           <div class="info_info">
             <h5>
               Information
@@ -264,7 +264,7 @@
             </p>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
           <div class="info_links">
             <h5>
               Links
@@ -276,44 +276,30 @@
                 </a>
               </li>
               <li>
-                <a href="about.html">
-                  Shop our Menu
+                <a href="https://bakery-105196.square.site/">
+                  Shop Our Menu
+                </a>
+              </li>
+                              <li>
+                <a href="#">
+                  Wedding Cakes
                 </a>
               </li>
               <li>
-                <a href="product.html">
+                <a href="testing_gallery_display.php">
                   Gallery
                 </a>
               </li>
               <li>
-                <a href="why.html">
-                  Contact
+                <a href="contact.html">
+                  Visit Us
                 </a>
               </li>
             </ul>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="info_form ">
-            <h5>
-              Newsletter
-            </h5>
-            <form action="">
-              <input type="email" placeholder="Enter your email">
-              <button>
-                Subscribe
-              </button>
-            </form>
-            <div class="social_box"><a href="https://www.facebook.com/calicaliclark/" target="_blank">Connect With Us on Facebook!
-                </a>
-              <a href="https://www.facebook.com/calicaliclark/" target="_blank">
-                <i class="fa fa-facebook facebook" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
-    </footer>
+</footer>
 </html>

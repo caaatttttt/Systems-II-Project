@@ -220,6 +220,7 @@ box-shadow: 12px 12px 5px 1px rgba(0, 0, 255, .2);
   background-color: #990033;
   color: #ffffff;
   padding: 90px 0 45px 0;
+    text-align: center;
 }
 
 .info_section h5 {
@@ -379,8 +380,13 @@ height:90%;
     border-radius: 15px;
     box-shadow: 40px -50px rgb(153, 0, 51);
 }
+
+.about-us{
+height: auto;
+}
 .text{
-  width: 95%;    
+  width: 95%;
+padding: 3rem;
     
 }
 .text h2{
@@ -404,6 +410,7 @@ height:90%;
   font-size: 1.75rem;
 
 }
+
 
 form.file_upload {
 background: #ffe6e6;
@@ -438,7 +445,7 @@ margin:20px auto;
 }
 
 .reviews .container-fluid iframe{
-    height:85vh;
+    height:50vh;
     width:100%;
     align-content: center;
     border: none;
@@ -460,6 +467,7 @@ background-color: #DAC2CA;
 margin: 1em;
 padding: 1em;
 border-radius: 15px;}
+
 
 .specialties p {
     font-family: 'Poppins', sans-serif;
@@ -582,7 +590,20 @@ color: white;
     .mobile-contact {
         display: none;
     }
-/* Large devices (less than 1200px) */
+
+
+@media screen and (max-width: 1440px), print
+{ 
+    .text{
+      padding: 3rem;
+
+    }
+
+    .text p{
+        font-size: 1.3rem;
+    }
+}
+
 @media screen and (max-width: 1200px), print
 { 
     .mobile_specialties
@@ -626,7 +647,7 @@ color: white;
     }
 
     .about-us {
-        height: 55vh;
+        height: auto;
         padding: 0;
         background: none;
     }
@@ -636,7 +657,11 @@ color: white;
     }
     
     .text {
-        width: 55%;    
+        width: 55%;
+        padding-top: 2rem;
+        padding-left: 0;
+        padding-bottom: 2rem;
+    
     }
     
     .text h2 {

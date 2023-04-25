@@ -1,0 +1,114 @@
+        body {
+  background-color:#fff5f8;
+        font-family: 'Crete Round', serif;}
+    
+    .main, .register {
+        width: 450px;
+        margin: 7em auto;
+        border-radius: 1.5em;
+        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+        font-family: 'Crete Round', serif;
+    }
+
+
+    .register {
+        height: 750px;
+        width: 600px;
+    }
+    
+
+    .signin {
+        padding-top: 40px;
+        color: #990033;
+        font-family: 'Poiret One', cursive;
+        font-weight: bold;
+        font-size: 2em;
+    }
+
+    
+    .username, .password {
+    width: 76%;
+    color: rgb(38, 50, 56);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: #f2f2f2;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(153, 0, 51, 0.25);
+    margin-bottom: 50px;
+    text-align: center;
+    margin-bottom: 27px;
+    font-family: 'Crete Round', serif;
+    }
+
+    .fname, .lname, .phone, .email, .create_password {
+    color: rgb(38, 50, 56);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: #f2f2f2;
+    padding: 10px 50px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(153, 0, 51, 0.25);
+    display: inline-block;
+        text-align: center;
+    font-family: 'Crete Round', serif;  
+        margin-bottom: 20px;
+}
+
+.fname, .lname {
+width: 49%;
+    }
+
+    
+form.register_form, form.signin_form {
+  display:block;
+  text-align:center;
+  padding:10px;
+}
+   
+    .username:focus, .password:focus {
+        border: 2px solid rgba(153, 0, 51, 0.75); !important;
+}
+    
+    .submit_btn {
+      cursor: pointer;
+        border-radius: 5em;
+        background: #990033;
+        border: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        width: 50%;
+        font-family: 'Crete Round', serif;
+        font-size: 13px;
+        color: #f2f2f2;
+    }
+    
+    .create_acc {
+        color: #990033;
+        padding-top: 20px;  
+    }
+    .forgot_pass {
+        color: #990033;
+        padding-top: 0;
+    }
+    a {
+        color: #6B336C;
+        text-decoration: none;
+    }
+    
+    @media (max-width: 600px) {
+        .main {
+            border-radius: 0px;
+        }
+        
+    

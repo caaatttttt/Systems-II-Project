@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 05, 2023 at 01:17 AM
+-- Generation Time: Apr 25, 2023 at 02:38 AM
 -- Server version: 8.0.31
 -- PHP Version: 8.0.26
 
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `cakes` (
   `uploaded_on` datetime NOT NULL,
   `status` enum('1','0') COLLATE utf8mb4_general_ci NOT NULL DEFAULT '1',
   PRIMARY KEY (`cake_img_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=89 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=93 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `cakes`
@@ -42,7 +42,6 @@ CREATE TABLE IF NOT EXISTS `cakes` (
 
 INSERT INTO `cakes` (`cake_img_id`, `file_name`, `uploaded_on`, `status`) VALUES
 (63, 'cake7.jpg', '2023-03-30 00:28:51', '1'),
-(64, 'cake9.jpg', '2023-03-30 00:28:56', '1'),
 (65, 'cake10.jpg', '2023-03-30 00:29:11', '1'),
 (66, 'cake11.jpg', '2023-03-30 00:29:16', '1'),
 (67, 'cake12.jpg', '2023-03-30 00:29:22', '1'),
@@ -58,8 +57,7 @@ INSERT INTO `cakes` (`cake_img_id`, `file_name`, `uploaded_on`, `status`) VALUES
 (77, 'cake20.jpg', '2023-03-30 00:30:33', '1'),
 (78, 'cake21.jpg', '2023-03-30 00:30:42', '1'),
 (83, 'cake2.jpg', '2023-04-03 18:04:20', '1'),
-(84, 'cake3.jpg', '2023-04-03 18:17:58', '1'),
-(87, 'cake6.jpg', '2023-04-03 18:19:37', '1');
+(84, 'cake3.jpg', '2023-04-03 18:17:58', '1');
 
 -- --------------------------------------------------------
 
@@ -74,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `cookies` (
   `uploaded_on` datetime NOT NULL,
   `status` enum('1','0') COLLATE utf8mb4_general_ci NOT NULL DEFAULT '1',
   PRIMARY KEY (`cookie_img_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `cookies`
@@ -82,14 +80,14 @@ CREATE TABLE IF NOT EXISTS `cookies` (
 
 INSERT INTO `cookies` (`cookie_img_id`, `file_name`, `uploaded_on`, `status`) VALUES
 (11, 'cookie1.jpg', '2023-03-05 19:01:31', '1'),
-(12, 'cookie2.jpg', '2023-03-05 19:03:31', '1'),
 (13, 'cookie3.jpg', '2023-03-05 19:03:37', '1'),
 (14, 'cookie5.jpg', '2023-03-05 19:03:52', '1'),
 (15, 'cookie4.jpg', '2023-03-05 19:04:07', '1'),
 (16, 'cookie6.jpg', '2023-03-06 18:03:10', '1'),
 (17, 'cookie7.jpg', '2023-03-06 18:03:22', '1'),
 (18, 'cookie8.jpg', '2023-03-06 18:03:30', '1'),
-(19, 'cookie9.jpg', '2023-03-06 18:03:37', '1');
+(19, 'cookie9.jpg', '2023-03-06 18:03:37', '1'),
+(20, 'cookie2.jpg', '2023-04-10 11:28:52', '1');
 
 -- --------------------------------------------------------
 
@@ -104,14 +102,13 @@ CREATE TABLE IF NOT EXISTS `cupcakes` (
   `uploaded_on` datetime NOT NULL,
   `status` enum('1','0') COLLATE utf8mb4_general_ci NOT NULL DEFAULT '1',
   PRIMARY KEY (`cupcake_img_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `cupcakes`
 --
 
 INSERT INTO `cupcakes` (`cupcake_img_id`, `file_name`, `uploaded_on`, `status`) VALUES
-(12, 'cupcake2.jpg', '2023-03-05 19:01:09', '1'),
 (13, 'cupcake3.jpg', '2023-03-05 19:01:16', '1'),
 (14, 'cupcake5.jpg', '2023-03-05 20:19:36', '1'),
 (15, 'cupcake6.jpg', '2023-03-05 20:19:45', '1'),
@@ -123,7 +120,8 @@ INSERT INTO `cupcakes` (`cupcake_img_id`, `file_name`, `uploaded_on`, `status`) 
 (22, 'cupcake13.jpg', '2023-03-05 20:28:40', '1'),
 (23, 'cupcake14.jpg', '2023-03-05 20:28:47', '1'),
 (24, 'cupcake15.jpg', '2023-03-05 20:28:54', '1'),
-(25, 'cupcake16.jpg', '2023-03-05 20:29:01', '1');
+(25, 'cupcake16.jpg', '2023-03-05 20:29:01', '1'),
+(26, 'cupcake2.jpg', '2023-04-10 11:28:28', '1');
 
 -- --------------------------------------------------------
 
@@ -138,14 +136,13 @@ CREATE TABLE IF NOT EXISTS `other` (
   `uploaded_on` datetime NOT NULL,
   `status` enum('1','0') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '1',
   PRIMARY KEY (`other_img_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `other`
 --
 
 INSERT INTO `other` (`other_img_id`, `file_name`, `uploaded_on`, `status`) VALUES
-(11, 'other1.jpg', '2023-03-05 19:04:45', '1'),
 (12, 'other2.jpg', '2023-03-05 19:04:52', '1'),
 (13, 'other3.jpg', '2023-03-05 19:04:59', '1'),
 (14, 'other4.jpg', '2023-03-05 19:05:06', '1'),
@@ -156,7 +153,8 @@ INSERT INTO `other` (`other_img_id`, `file_name`, `uploaded_on`, `status`) VALUE
 (21, 'other12.jpg', '2023-03-06 18:15:43', '1'),
 (22, 'other11.jpg', '2023-03-06 18:16:00', '1'),
 (23, 'other13.jpg', '2023-03-06 19:03:29', '1'),
-(24, 'other14.jpg', '2023-03-06 19:03:38', '1');
+(24, 'other14.jpg', '2023-03-06 19:03:38', '1'),
+(25, 'other1.jpg', '2023-04-10 11:29:39', '1');
 
 -- --------------------------------------------------------
 
@@ -171,14 +169,13 @@ CREATE TABLE IF NOT EXISTS `wedding_cake` (
   `uploaded_on` datetime NOT NULL,
   `status` enum('1','0') COLLATE utf8mb4_general_ci NOT NULL DEFAULT '1',
   PRIMARY KEY (`wedding_cake_img_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `wedding_cake`
 --
 
 INSERT INTO `wedding_cake` (`wedding_cake_img_id`, `file_name`, `uploaded_on`, `status`) VALUES
-(10, 'wedding_cake.jpg', '2023-03-05 19:04:17', '1'),
 (11, 'wedding_cake2.jpg', '2023-03-05 19:04:23', '1'),
 (12, 'wedding_cake3.jpg', '2023-03-05 19:04:32', '1'),
 (13, 'wedding_cake4.jpg', '2023-03-05 20:05:44', '1'),
@@ -192,7 +189,8 @@ INSERT INTO `wedding_cake` (`wedding_cake_img_id`, `file_name`, `uploaded_on`, `
 (22, 'wedding_cake13.jpg', '2023-03-06 18:13:21', '1'),
 (23, 'wedding_cake14.jpg', '2023-03-06 18:13:32', '1'),
 (24, 'wedding_cake135.jpg', '2023-03-06 18:13:39', '1'),
-(25, 'wedding_cake16.jpg', '2023-03-06 19:03:16', '1');
+(25, 'wedding_cake16.jpg', '2023-03-06 19:03:16', '1'),
+(26, 'wedding_cake.jpg', '2023-04-10 11:29:14', '1');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

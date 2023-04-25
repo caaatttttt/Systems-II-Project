@@ -65,7 +65,7 @@
             <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="https://bakery-105196.square.site" target="_blank">Shop Online</a></li>
-            <li><a href="index.html">Wedding Cakes</a></li>
+            <li><a href="wedding.php">Wedding Cakes</a></li>
 
             <li><a href="testing_gallery_display.php">Gallery</a></li>
             <li><a href="contact.html">Visit Us</a></li>
@@ -84,7 +84,7 @@
               <div id="myLinks">
                 <a href="index.html">Home</a>
                 <a href="https://bakery-105196.square.site" target="_blank">Shop Online</a>
-                <a href="#wedding_cakes">Wedding Cakes</a>
+                <a href="wedding.php">Wedding Cakes</a>
                 <a href="testing_gallery_display.php">Gallery</a>
                 <a href="contact.html">Visit Us</a>
               </div>
@@ -281,7 +281,7 @@
                 </a>
               </li>
                               <li>
-                <a href="#">
+                <a href="wedding.php">
                   Wedding Cakes
                 </a>
               </li>
@@ -293,6 +293,11 @@
               <li>
                 <a href="contact.html">
                   Visit Us
+                </a>
+              </li>
+                <li>
+                <a href="login.php">
+                  Login
                 </a>
               </li>
             </ul>

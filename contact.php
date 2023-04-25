@@ -1,3 +1,12 @@
+<?php 
+
+session_start();
+
+	include("connection.php");
+	include("functions.php");
+	
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +34,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Gloria+Hallelujah&family=Mynerve&family=Poiret+One&family=Poppins&display=swap" rel="stylesheet">
 
   <!-- font awesome style -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet">
@@ -50,41 +59,40 @@
         </div>
       </div>
         
-        <!-- Navigation Bar -->
+     <!-- Navigation -->
         <div class="navigation">
             <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="https://bakery-105196.square.site"  target="_blank">Shop Online</a></li>
-            <li><a href="wedding.php">Wedding Cakes</a></li>
-            <li><a href="testing_gallery_display.php">Gallery</a></li>
-            <li><a href="contact.html">Visit Us</a></li>
-            </ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="https://bakery-105196.square.site" target="_blank">Shop Online</a></li>
+            <li><a href="admin.php">Admin Dashboard</a></li>
+            <li><a href="testing_remove_gallery.php">Gallery Update</a></li>
+            <li><a href="contact.php">Visit Us</a></li>
+            </ul>        
         </div>
         
         <!-- Mobile Navigation -->
         <div class="mobile_navigation">
         <div class="mobile-container">
         <div class="topnav">
-            <a href="index.html" class="active_">
+          <a href="admin.php" class="active_">
               <span>
-                Delicioso Cupcakery & Coffee Shop
+                Admin Dashboard
               </span>
             </a>
-            <div id="myLinks">
-                <a href="index.html">Home</a>
-                <a href="https://bakery-105196.square.site" target="_blank">Shop Online</a>
-                <a href="wedding.php">Wedding Cakes</a>
-                <a href="testing_gallery_display.php">Gallery</a>
-                <a href="contact.html">Visit Us</a>
-            </div>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars hamburger"></i>
-            </a>
+          <div id="myLinks">
+            <a href="index.php">Home</a>
+            <a href="https://bakery-105196.square.site" target="_blank">Shop Online</a>
+            <a href="admin.php">Admin Dashboard</a>
+            <a href="testing_remove_gallery.php">Gallery Update</a>
+            <a href="contact.php">Visit Us</a>
+          </div>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars hamburger"></i>
+          </a>
         </div>
         </div> 
         </div>
- 
-    </header>     
+      </header>     
   </div>
     
     <!-- Hero Image --> 
@@ -223,33 +231,33 @@
             </h5>
             <ul>
               <li>
-                <a href="index.html">
+                <a href="index.php">
                   Home
                 </a>
               </li>
               <li>
-                <a href="https://bakery-105196.square.site/">
-                  Shop Our Menu
-                </a>
-              </li>
-                              <li>
-                <a href="wedding.php">
-                  Wedding Cakes
+                <a href="https://bakery-105196.square.site">
+                  Shop our Menu
                 </a>
               </li>
               <li>
-                <a href="testing_gallery_display.php">
-                  Gallery
+                <a href="admin.php">
+                  Admin Dashboard
                 </a>
               </li>
               <li>
-                <a href="contact.html">
-                  Visit Us
+                <a href="testing_remove_gallery.php">
+                  Gallery Update
                 </a>
               </li>
-                <li>
-                <a href="login.php">
-                  Login
+              <li>
+                <a href="contact.php">
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a href="index.html">
+                  Logout
                 </a>
               </li>
             </ul>
@@ -259,5 +267,6 @@
     </div>
   </section>
 </footer>
+
 
 </html>

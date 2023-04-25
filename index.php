@@ -1,3 +1,12 @@
+<?php 
+
+session_start();
+
+	include("connection.php");
+	include("functions.php");
+	
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +27,6 @@
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- fonts style -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,12 +60,11 @@
         <!-- Navigation -->
         <div class="navigation">
             <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a href="https://bakery-105196.square.site" target="_blank">Shop Online</a></li>
-            <li><a href="wedding.php">Wedding Cakes</a></li>
-
-            <li><a href="testing_gallery_display.php">Gallery</a></li>
-            <li><a href="contact.html">Visit Us</a></li>
+            <li><a href="admin.php">Admin Dashboard</a></li>
+            <li><a href="testing_remove_gallery.php">Gallery Update</a></li>
+            <li><a href="contact.php">Visit Us</a></li>
             </ul>        
         </div>
         
@@ -65,17 +72,17 @@
         <div class="mobile_navigation">
         <div class="mobile-container">
         <div class="topnav">
-          <a href="index.html" class="active_">
+          <a href="admin.php" class="active_">
               <span>
-                Delicioso Cupcakery & Coffee Shop
+                Admin Dashboard
               </span>
             </a>
           <div id="myLinks">
-            <a href="index.html">Home</a>
+            <a href="index.php">Home</a>
             <a href="https://bakery-105196.square.site" target="_blank">Shop Online</a>
-            <a href="wedding.php">Wedding Cakes</a>
-            <a href="testing_gallery_display.php">Gallery</a>
-            <a href="contact.html">Visit Us</a>
+            <a href="admin.php">Admin Dashboard</a>
+            <a href="testing_remove_gallery.php">Gallery Update</a>
+            <a href="contact.php">Visit Us</a>
           </div>
           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars hamburger"></i>
@@ -84,11 +91,11 @@
         </div> 
         </div>
       </header>
-      
       <!-- Hero Banner Image -->
       <div class="hero_div">
         <img src="images/banner.png" alt="Banner Image of cake with logo" class="hero-img">
       </div>
+      
     </div>
     
     <div class="home_page">
@@ -153,7 +160,7 @@
               Our Specialties
             </h2>         
         </div>
-        <div class="swiffy-slider slider-item-show2 slider-item-show2-sm slider-item-reveal slider-nav-dark slider-nav-visible slider-nav-autoplay  slider-nav-autopause">
+        <div class="swiffy-slider slider-item-show2 slider-item-reveal slider-nav-dark slider-nav-visible slider-nav-autoplay  slider-nav-autopause">
         <ul class="slider-container py-4">
             <li class="slide-visible">
                 <div class="top_img">
@@ -210,7 +217,7 @@
           <div class="text">
             <h2>Who We Are</h2>
               <h5><span class="owner_name">Maria Torres</span> & <span class="owner_name">Otilia Espinoza</span></h5>
-              <p>Sisters and proud owners Lupe Torres and Otilia Espinoza have poured their hearts into their joint bakery and coffee shop, Delicioso Cupcakery & Coffee Shop. A few years ago, Lupe, who has been a dessert hobbyist since 2012, realized her dissatisfactions with her work at a manufacturing plant and yearned to pursue a career doing what she loved: baking. With her heart set on turning her love for baking into a business, Lupe approached her sister, Otilia, with the idea, and a plan quickly fell into place. With unwavering love and support from friends and family, the sister duo acquired the building for their shop in 2018, setting the stage for the career of their dreams. After nearly three years of renovation, the sisters held a ribbon-cutting ceremony and officially opened their shop in September of 2020. Their dedication and delicious treats quickly earned them the 2020 Small Business of the Year. Together, Lupe and Otilia have made Delicioso Cupcakery & Coffee Shop a cherished part of the community, adored by locals and visitors alike.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita natus ad sed harum itaque ullam enim quas, veniam accusantium, quia animi id eos adipisci iusto molestias asperiores explicabo cum vero atque amet corporis! Soluta illum facere consequuntur magni. Ullam dolorem repudiandae cumque voluptate consequatur consectetur, eos provident necessitatibus reiciendis corrupti!</p>
           </div>
         </div>
       </section>
@@ -222,7 +229,7 @@
             <h2>Who We Are</h2>
               <h5><span class="owner_name">Maria Torres</span> & <span class="owner_name">Otilia Espinoza</span></h5>
                <img src="images/owners.jpg" alt="image of owners Maria Torres and Otilia Espinoza" class="pic">
-                   <p>Sisters and proud owners Lupe Torres and Otilia Espinoza have poured their hearts into their joint bakery and coffee shop, Delicioso Cupcakery & Coffee Shop. A few years ago, Lupe, who has been a dessert hobbyist since 2012, realized her dissatisfactions with her work at a manufacturing plant and yearned to pursue a career doing what she loved: baking. With her heart set on turning her love for baking into a business, Lupe approached her sister, Otilia, with the idea, and a plan quickly fell into place. With unwavering love and support from friends and family, the sister duo acquired the building for their shop in 2018, setting the stage for the career of their dreams. After nearly three years of renovation, the sisters held a ribbon-cutting ceremony and officially opened their shop in September of 2020. Their dedication and delicious treats quickly earned them the 2020 Small Business of the Year. Together, Lupe and Otilia have made Delicioso Cupcakery & Coffee Shop a cherished part of the community, adored by locals and visitors alike.</p>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita natus ad sed harum itaque ullam enim quas, veniam accusantium, quia animi id eos adipisci iusto molestias asperiores explicabo cum vero atque amet corporis! Soluta illum facere consequuntur magni. Ullam dolorem repudiandae cumque voluptate consequatur consectetur, eos provident necessitatibus reiciendis corrupti!</p>
         </div>
         </div>
     </section>
@@ -289,33 +296,33 @@
             </h5>
             <ul>
               <li>
-                <a href="index.html">
+                <a href="index.php">
                   Home
                 </a>
               </li>
               <li>
-                <a href="https://bakery-105196.square.site/">
-                  Shop Our Menu
-                </a>
-              </li>
-                              <li>
-                <a href="wedding.php">
-                  Wedding Cakes
+                <a href="https://bakery-105196.square.site">
+                  Shop our Menu
                 </a>
               </li>
               <li>
-                <a href="testing_gallery_display.php">
-                  Gallery
+                <a href="admin.php">
+                  Admin Dashboard
                 </a>
               </li>
               <li>
-                <a href="contact.html">
-                  Visit Us
+                <a href="testing_remove_gallery.php">
+                  Gallery Update
                 </a>
               </li>
-                <li>
-                <a href="login.php">
-                  Login
+              <li>
+                <a href="contact.php">
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a href="index.html">
+                  Logout
                 </a>
               </li>
             </ul>

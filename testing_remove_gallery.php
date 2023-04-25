@@ -1,3 +1,11 @@
+<?php 
+session_start();
+	include("connection.php");
+	include("functions.php");
+	
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,37 +59,36 @@
         
         <!-- Navigation -->
         <div class="navigation">
-            <ul>
-            <li><a href="index.html">Home</a></li>
+	       <ul>
+            <li><a href="index.php">Home</a></li>
             <li><a href="https://bakery-105196.square.site" target="_blank">Shop Online</a></li>
-            <li><a href="index.html">Wedding Cakes</a></li>
-
-            <li><a href="testing_gallery_display.php">Gallery</a></li>
-            <li><a href="contact.html">Visit Us</a></li>
-            </ul>
+            <li><a href="admin.php">Admin Dashboard</a></li>
+            <li><a href="testing_remove_gallery.php">Gallery Update</a></li>
+            <li><a href="contact.php">Visit Us</a></li>
+           </ul>        
         </div>
         
-       <!-- Mobile Navigation -->
-        <div class="mobile_navigation">
-        <div class="mobile-container">
-            <div class="topnav">
-                <a href="index.html" class="active_">
-                <span>
-                Delicioso Cupcakery & Coffee Shop
-                </span>
-                </a>
-              <div id="myLinks">
-                <a href="index.html">Home</a>
-                <a href="https://bakery-105196.square.site" target="_blank">Shop Online</a>
-                <a href="#wedding_cakes">Wedding Cakes</a>
-                <a href="testing_gallery_display.php">Gallery</a>
-                <a href="contact.html">Visit Us</a>
-              </div>
-              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars hamburger"></i>
-              </a>
-            </div>
-        </div> 
+	       <!-- Mobile Navigation -->	
+        <div class="mobile_navigation">	
+        <div class="mobile-container">	
+            <div class="topnav">	
+                <a href="index.html" class="active_">	
+                <span>	
+                Delicioso Cupcakery & Coffee Shop	
+                </span>	
+                </a>	
+              <div id="myLinks">	
+                <a href="index.html">Home</a>	
+                <a href="https://bakery-105196.square.site" target="_blank">Shop Online</a>	
+                <a href="#wedding_cakes">Wedding Cakes</a>	
+                <a href="testing_gallery_display.php">Gallery</a>	
+                <a href="contact.html">Visit Us</a>	
+              </div>	
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">	
+                <i class="fa fa-bars hamburger"></i>	
+              </a>	
+            </div>	
+        </div> 	
         </div>
     </header>     
   </div>
@@ -377,4 +384,75 @@ $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/custom.js"></script>
 </body>
+    <!-- Footer -->
+<footer>
+  <!-- info section -->
+  <section class="info_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="info_contact">
+            <h5>Contact Us
+ 
+            </h5>
+            <p>
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <a href=" http://maps.google.com/?q=1001 W Main St, Clarksville AR 72830">1001 W Main St, Clarkville AR 72830</a>
+            <p>
+              <i class="fa fa-phone" aria-hidden="true"></i>
+             <a href="tel:4792142537"> (479) 214-2537</a>
+            <p>
+              <i class="fa fa-envelope desktop" aria-hidden="true"></i>
+              <a href="mailto:deliciosoandc@gmail.com">deliciosoandc@gmail.com</a>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="info_info">
+            <h5>
+              Information
+            </h5>
+            <p>
+              We are a small bakery and coffee shop located in downtown Clarksville, AR. We strive to bring the community the best-tasting speciality desserts! Come on by!
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="info_links">
+            <h5>
+              Links
+            </h5>
+            <ul>
+              <li>
+                <a href="index.html">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="https://bakery-105196.square.site/">
+                  Shop Our Menu
+                </a>
+              </li>
+                              <li>
+                <a href="wedding.php">
+                  Wedding Cakes
+                </a>
+              </li>
+              <li>
+                <a href="testing_gallery_display.php">
+                  Gallery
+                </a>
+              </li>
+              <li>
+                <a href="contact.html">
+                  Visit Us
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</footer>
 </html>

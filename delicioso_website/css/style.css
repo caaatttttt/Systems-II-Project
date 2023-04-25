@@ -352,7 +352,7 @@ border-bottom: none;
     display: none;
 }
 .map {
-height:90%;
+    height:90%;
     margin: 15px;
     border:  4mm ridge #990033;
     width: 210%;
@@ -381,9 +381,7 @@ height:90%;
     box-shadow: 40px -50px rgb(153, 0, 51);
 }
 
-.about-us{
-height: auto;
-}
+
 .text{
   width: 95%;
 padding: 3rem;
@@ -587,9 +585,9 @@ color: white;
 .about-us-mobile {
     display: none;
  }
-    .mobile-contact {
+.mobile-contact {
         display: none;
-    }
+}
 
 
 @media screen and (max-width: 1440px), print
@@ -601,6 +599,11 @@ color: white;
 
     .text p{
         font-size: 1.3rem;
+    }
+    
+    .sepcialties {
+        display: contents;
+        
     }
 }
 
@@ -756,7 +759,7 @@ color: white;
         display: none;
     }
     
-    .mobile-contact {
+    .about-us-mobile {
         display: contents;
     }
     
@@ -806,16 +809,85 @@ color: white;
     }
     
     
+    
+    .mobile_specialties
+    {
+        display: contents;
+    }
+    
+    .specialties {
+    
+        display: none;
+    }
+    
+    .start_img img, .start_body  {
+        margin-left: 4rem;
+    }
+    
+    .end_img img, .end_body  {
+        margin-right: 4rem;
+    }
+    
+    .mobile_specialties h2 {
+        padding-top: 1.5rem;
+        padding-bottom: 0;
+    }
+    
+    .ratio {
+        text-align: center;
+        width: 100%;
+    }
+    .card-img-top {
+        height: 500px;
+        width: 500px;
+        text-align: center;
+        border-radius: 15px;
+    }
+
+    .card-body {
+        text-align:center;
+    }
+    
+    .home_btns {
+    margin-top: 25px;
+    padding-top: 10px;
+    text-align: center;
+    border: 5px #990033 solid;
+    background-color: #990033;
+    border-radius: 25px;
+    width: 50%;
+    }
+    
 }
 
 /* Tablet devices (less than 768px) */
 @media screen and (max-width: 768px), print
 { 
-    .mobile_specialties
-    {
+
+    .about-us{
         display: none;
     }
-
+    
+    .about-us-mobile .text {
+        text-align: center;
+        width: 100%;
+        padding: 2rem;
+    }
+    
+    .about-us-mobile img {
+        width: 100%;
+        text-align: center;
+        border: solid .75rem #990033; 
+    }
+    
+    .about-us-mobile .text p {
+        font-size: 1.25rem;
+        padding-bottom: 4rem;
+    }
+    .about-us-mobile {
+        display: contents;
+    }
+    
     .navigation li {
         font-size: 1rem;
     }
@@ -824,10 +896,6 @@ color: white;
     display: none;
     }
 
-    .specialties p {
-        font-size: 1.2rem;
-    }
-    
     .heading_container.heading_center h2 {
         font-size: 1.75rem;
     }
@@ -849,23 +917,11 @@ color: white;
         margin-top: 4rem;
         margin-bottom: 3rem;
     }
-    
-    .about-us{
-        height:40vh;
-        width: 100%;
-    }
 
-    .product_section .box .detail-box a h5 {
-        font-size: 1rem;
-    }
+
     
     .layout_padding {
         padding: 20px 0;
-    }
-
-    .product_section .box {
-        padding: 0;
-        margin-top: 15px;
     }
     
     .info_section {
@@ -920,10 +976,6 @@ color: white;
     .gallery_display img {
         padding: .75rem;
         height: 250px;
-    }
-    
-    .about-us-mobile {
-        display: none;
     }
     
     .contact_area {
@@ -991,12 +1043,22 @@ color: white;
         text-decoration: none!important;
         color: #990033;
     }
+    
+        .card-img-top {
+        height: 400px;
+        width: 400px;
+    }
 }
 
 /* X-Small devices (portrait phones, less than 576px) */
 @media screen and (max-width: 575.98px), print {
     .navbar-brand {
         font-size: 2rem;
+    }
+    
+    .card-img-top {
+        height: 300px;
+        width: 300px;
     }
     
     .navigation li {
@@ -1076,44 +1138,7 @@ color: white;
     .product_section .box .detail-box {
         width: 40%;
     }
-    
-    .ratio {
-    text-align: center;
-        width: 100%;
-    }
-        .card-img-top {
-        height: 300px;
-            width: 300px;
-            text-align: center;
-            border-radius: 15px;
-    }
 
-    .card-body {
-        text-align:center;
-    }
-    
-    .home_btns {
-        margin-top: 25px;
-    padding-top: 10px;
-    text-align: center;
-    border: 5px #990033 solid;
-        background-color: #990033;
-    border-radius: 25px;
-  width: 50%;
-    }
-    
-    .mobile_specialties h2 {
-        padding-top: 1.5rem;
-        padding-bottom: 0;
-    }
-    
-    .specialties {
-        display: none;
-    }
-    
-    .mobile_specialties {
-        display: contents;
-    }
     
     .about-us {
         display: none;
@@ -1126,7 +1151,8 @@ color: white;
     
     .about-us-mobile .text {
         text-align: center;
-                width: 100%;
+        width: 100%;
+        padding: 2rem;
     }
     
     .about-us-mobile img {
@@ -1138,14 +1164,6 @@ color: white;
     .about-us-mobile .text p {
         font-size: 1.25rem;
         padding-bottom: 4rem;
-    }
-    
-    .start_img img, .start_body  {
-        margin-left: 4rem;
-    }
-    
-    .end_img img, .end_body  {
-        margin-right: 4rem;
     }
     
     .contact-text-mobile {

@@ -758,9 +758,12 @@ color: white;
     .demo-bg {
         display: none;
     }
+    .about-us {
+        display: contents;
+    }
     
     .about-us-mobile {
-        display: contents;
+        display: none;
     }
     
     .contact-text-mobile {
@@ -940,6 +943,7 @@ color: white;
     .header_logo {
         width: 8%;
     }
+    
     
     .info_section .info_form .social_box a {
         margin-right: 5px;
